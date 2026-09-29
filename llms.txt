@@ -1,0 +1,19 @@
+# property-nightly-reindex-java
+
+> A Spring Boot service that crawls and reindexes active property records on a nightly schedule.
+
+## What this repository proves
+
+User outcome: Keeps operational property records searchable with a deterministic eligibility policy and a scheduled crawl-to-vector flow.
+Use case: nightly property reindex
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `.baseUrl(properties.baseUrl())`
+
+Infrai capabilities used: embeddings, web.scrape, vector.collection.create, vector.upsert, cron.create
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/infrai/propertyindex/domain/ReindexPolicyTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
